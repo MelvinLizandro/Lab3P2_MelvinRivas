@@ -11,9 +11,11 @@ package lab3p2_melvinrivas;
 public class Firetype extends Pokemon {
     int potellamas;
 
-    public Firetype(int potellamas) {
+    public Firetype(int potellamas, String nombre, int numpoke, String naturaleza, boolean capturado) {
+        super(nombre, numpoke, naturaleza, capturado);
         this.potellamas = potellamas;
     }
+
 
     public int getPotellamas() {
         return potellamas;
