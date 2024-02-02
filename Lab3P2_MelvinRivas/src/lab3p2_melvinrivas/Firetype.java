@@ -16,6 +16,13 @@ public class Firetype extends Pokemon {
         this.potellamas = potellamas;
     }
 
+    public Firetype() {
+        System.out.println(potellamas);
+    }
+
+
+    
+    
 
     public int getPotellamas() {
         return potellamas;
@@ -25,7 +32,10 @@ public class Firetype extends Pokemon {
         this.potellamas = potellamas;
     }
     
-    
+    @Override
+    public String toString() {
+        return super.toString() + ", potellamas=" + potellamas;
+    }
     
     
 }

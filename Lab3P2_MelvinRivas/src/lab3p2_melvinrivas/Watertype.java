@@ -13,12 +13,20 @@ public class Watertype extends Pokemon{
     boolean respira; //representa si puede estar fuera del agua o no 
     int velonadar; //velocidad al nadar
 
+    public Watertype() {
+        
+        
+    }
+    
     public Watertype(boolean respira, int velonadar, String nombre, int numpoke, String naturaleza, boolean capturado) {
         super(nombre, numpoke, naturaleza, capturado);
         this.respira = respira;
         this.velonadar = velonadar;
     }
 
-
+@Override
+    public String toString() {
+        return super.toString() + ", Respira: " + respira + ", Velocidad al nadar: "+ velonadar;
+    }
     
 }

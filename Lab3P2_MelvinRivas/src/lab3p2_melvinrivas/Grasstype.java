@@ -36,5 +36,9 @@ public class Grasstype extends Pokemon {
         this.domplantas = domplantas;
     }
     
+    @Override
+    public String toString() {
+        return super.toString() + ", habitad: " + habitad + ", Dominio de plantas: " + domplantas;
+    }
     
 }

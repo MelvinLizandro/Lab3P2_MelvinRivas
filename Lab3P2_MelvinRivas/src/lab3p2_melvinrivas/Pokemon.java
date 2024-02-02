@@ -57,12 +57,13 @@ public class Pokemon {
     public void setCapturado(boolean capturado) {
         this.capturado = capturado;
     }
-
+    
     @Override
     public String toString() {
-        return "Pokemon{" + "nombre=" + nombre + ", numpoke=" + numpoke + ", naturaleza=" + naturaleza + ", capturado=" + capturado + '}';
+        return "Pokemon: " + "nombre: " + nombre + ", numpoke: " + numpoke + ", naturaleza: " + naturaleza + ", capturado: " + capturado +  ',';
     }
-    
+
+
 
     
     

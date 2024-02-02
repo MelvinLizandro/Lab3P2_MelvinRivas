@@ -5,6 +5,7 @@
 package lab3p2_melvinrivas;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -20,7 +21,8 @@ public class Lab3P2_MelvinRivas {
 
         Scanner input = new Scanner(System.in);
 
-        ArrayList <Pokemon> poke = new ArrayList();
+        ArrayList <Pokemon> poke = new ArrayList<>();
+        ArrayList <Pokeball> poball = new ArrayList();
         
         int op = 0; //op = opciones del menu la inicializamos 
         do {
@@ -39,6 +41,7 @@ public class Lab3P2_MelvinRivas {
                 case 1: {
                     System.out.println("Ingrese el nombre del pokemon: ");
                     String nombre = input.nextLine();
+                    nombre = input.nextLine();
                     System.out.println("Ingrese el numero de entrada: ");
                     int  num = input.nextInt();
                     System.out.println("---Naturaleza---");
@@ -66,6 +69,7 @@ public class Lab3P2_MelvinRivas {
                         System.out.println("Ingrese la potencia de llama: ");
                         int potellamas = input.nextInt();
                         Firetype fire = new Firetype(potellamas,nombre,num,natu,capturado);
+                        poke.add(fire);
                     }else if (optipo == 2) {
                         System.out.println("Puede respirar fuera del agua 1.Si 2.No: ");
                         int opresp = input.nextInt();
@@ -80,6 +84,7 @@ public class Lab3P2_MelvinRivas {
                         System.out.println("Ingrese la velocidad de nadar: ");
                         int velocidad = input.nextInt();
                         Watertype water = new Watertype(respira,velocidad,nombre,num,natu,capturado);
+                        poke.add(water);
                     }else if (optipo == 3) {
                         System.out.println("Ingrese el habitad del pokemon: ");
                         String habitad = input.nextLine();
@@ -87,17 +92,32 @@ public class Lab3P2_MelvinRivas {
                         do{
                         System.out.println("Ingrese el dominio de plantas (0-100): ");
                          dominio = input.nextInt();
-                        }while(dominio >= 0 && dominio <= 100);
+                        }while(dominio >= 0 || dominio <= 100);
                         Grasstype grass = new Grasstype(habitad,dominio,nombre,num,natu,capturado);
+                        poke.add(grass);
+                        
                     }
                     break;
                 }
                 case 2: {
-
+                    System.out.println("Ingrese el color de la pokebola: ");
+                    String color = input.nextLine();
+                    System.out.println("Ingrese el numero de serie: ");
+                    int numserie = input.nextInt();
+                    Random random = new Random();
+                    int eficiencia = random.nextInt(1,3);
+                    Pokeball ball = new Pokeball(color,numserie,eficiencia);
+                    poball.add(ball);
+                    
                     break;
                 }
                 case 3: {
-
+                    for (int i = 0; i < poke.size(); i++) {
+                        if () {
+                            
+                        }
+                        System.out.println(poke);
+                    }
                     break;
                 }
                 case 4: {

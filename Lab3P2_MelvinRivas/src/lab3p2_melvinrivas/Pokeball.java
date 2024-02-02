@@ -12,4 +12,41 @@ public class Pokeball {
     String color;
     int numserie;
     int eficiencia;
+
+    public Pokeball(String color, int numserie, int eficiencia) {
+        this.color = color;
+        this.numserie = numserie;
+        this.eficiencia = eficiencia;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getNumserie() {
+        return numserie;
+    }
+
+    public void setNumserie(int numserie) {
+        this.numserie = numserie;
+    }
+
+    public int getEficiencia() {
+        return eficiencia;
+    }
+
+    public void setEficiencia(int eficiencia) {
+        this.eficiencia = eficiencia;
+    }
+
+    @Override
+    public String toString() {
+        return "Pokeball{" + "color: " + color + ", numserie: " + numserie + ", eficiencia: " + eficiencia + '}';
+    }
+    
+    
 }
