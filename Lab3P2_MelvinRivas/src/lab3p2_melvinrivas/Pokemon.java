@@ -9,5 +9,8 @@ package lab3p2_melvinrivas;
  * @author l3306
  */
 public class Pokemon {
-    
+    String nombre;
+    int numpoke;
+    String naturaleza;
+    boolean capturado;
 }

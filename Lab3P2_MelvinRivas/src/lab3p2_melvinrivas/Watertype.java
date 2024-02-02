@@ -8,6 +8,9 @@ package lab3p2_melvinrivas;
  *
  * @author l3306
  */
-public class Watertype {
+public class Watertype extends Pokemon{
+    
+    boolean respira; //representa si puede estar fuera del agua o no 
+    int velonadar; //velocidad al nadar
     
 }

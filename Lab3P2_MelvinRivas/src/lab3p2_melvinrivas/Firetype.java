@@ -8,6 +8,6 @@ package lab3p2_melvinrivas;
  *
  * @author l3306
  */
-public class Firetype {
-    
+public class Firetype extends Pokemon {
+    int potellamas;
 }

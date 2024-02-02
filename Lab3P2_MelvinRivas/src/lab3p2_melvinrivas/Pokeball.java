@@ -9,5 +9,7 @@ package lab3p2_melvinrivas;
  * @author l3306
  */
 public class Pokeball {
-    
+    String color;
+    int numserie;
+    int eficiencia;
 }

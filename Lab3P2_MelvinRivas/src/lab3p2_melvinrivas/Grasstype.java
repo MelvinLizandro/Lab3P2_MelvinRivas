@@ -8,6 +8,7 @@ package lab3p2_melvinrivas;
  *
  * @author l3306
  */
-public class Grasstype {
-    
+public class Grasstype extends Pokemon {
+    String  habitad;
+    int domplantas;
 }
