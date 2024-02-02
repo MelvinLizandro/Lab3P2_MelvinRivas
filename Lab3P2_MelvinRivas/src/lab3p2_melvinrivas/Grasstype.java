@@ -11,4 +11,27 @@ package lab3p2_melvinrivas;
 public class Grasstype extends Pokemon {
     String  habitad;
     int domplantas;
+
+    public Grasstype(String habitad, int domplantas) {
+        this.habitad = habitad;
+        this.domplantas = domplantas;
+    }
+
+    public String getHabitad() {
+        return habitad;
+    }
+
+    public int getDomplantas() {
+        return domplantas;
+    }
+
+    public void setHabitad(String habitad) {
+        this.habitad = habitad;
+    }
+
+    public void setDomplantas(int domplantas) {
+        this.domplantas = domplantas;
+    }
+    
+    
 }

@@ -12,5 +12,10 @@ public class Watertype extends Pokemon{
     
     boolean respira; //representa si puede estar fuera del agua o no 
     int velonadar; //velocidad al nadar
+
+    public Watertype(boolean respira, int velonadar) {
+        this.respira = respira;
+        this.velonadar = velonadar;
+    }
     
 }

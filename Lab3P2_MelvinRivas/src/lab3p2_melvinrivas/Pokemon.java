@@ -13,4 +13,18 @@ public class Pokemon {
     int numpoke;
     String naturaleza;
     boolean capturado;
+
+    public Pokemon() {
+    }
+
+    
+    public Pokemon(String nombre, int numpoke, String naturaleza, boolean capturado) {
+        this.nombre = nombre;
+        this.numpoke = numpoke;
+        this.naturaleza = naturaleza;
+        this.capturado = capturado;
+    }
+
+    
+    
 }

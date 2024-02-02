@@ -4,6 +4,7 @@
  */
 package lab3p2_melvinrivas;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -19,6 +20,8 @@ public class Lab3P2_MelvinRivas {
 
         Scanner input = new Scanner(System.in);
 
+        ArrayList <Pokemon> poke = new ArrayList();
+        
         int op = 0; //op = opciones del menu la inicializamos 
         do {
             System.out.println("1. Crear Pokemon");
@@ -34,7 +37,38 @@ public class Lab3P2_MelvinRivas {
 
             switch (op) {
                 case 1: {
-
+                    System.out.println("Ingrese el nombre del pokemon: ");
+                    String nombre = input.nextLine();
+                    System.out.println("Ingrese el numero de entrada: ");
+                    int  num = input.nextInt();
+                    System.out.println("---Naturaleza---");
+                    System.out.println("1. Timido");
+                    System.out.println("2. Energetico");
+                    System.out.println("3. Misterioso");
+                    System.out.print("Ingrese su naturaleza: ");
+                    int opnatu = input.nextInt();
+                    String natu;
+                    if (opnatu == 1) {
+                        natu = "Timido";
+                    }else if (opnatu == 2) {
+                        natu = "Energetico";
+                    }else if (opnatu == 3) {
+                        natu = "Misterioso";
+                    }
+                    boolean capturado = false;
+                    System.out.println("---Tipos de pokemon---");
+                    System.out.println("1. Tipo Fuego");
+                    System.out.println("2. Tipo Agua");
+                    System.out.println("3. Tipo Planta");
+                    System.out.print("Que tipo desea: ");
+                    int optipo = input.nextInt();
+                    if (optipo == 1) {
+                        System.out.println("Ingrese la potencia de llama: ");
+                        int potellamas = input.nextInt();
+                        Firetype fire = new Firetype(potellamas);
+                    }else if (optipo == 2) {
+                        System.out.println("Puede respirar fuera del agua 1.Si 2.No: ");
+                    }
                     break;
                 }
                 case 2: {
