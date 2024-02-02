@@ -88,11 +88,12 @@ public class Lab3P2_MelvinRivas {
                     }else if (optipo == 3) {
                         System.out.println("Ingrese el habitad del pokemon: ");
                         String habitad = input.nextLine();
+                        habitad = input.nextLine();
                         int dominio = 1;
                         do{
                         System.out.println("Ingrese el dominio de plantas (0-100): ");
                          dominio = input.nextInt();
-                        }while(dominio >= 0 || dominio <= 100);
+                        }while(dominio >= 0 && dominio <= 100);
                         Grasstype grass = new Grasstype(habitad,dominio,nombre,num,natu,capturado);
                         poke.add(grass);
                         
@@ -112,16 +113,18 @@ public class Lab3P2_MelvinRivas {
                     break;
                 }
                 case 3: {
+                    Firetype fire = new Firetype();
                     for (int i = 0; i < poke.size(); i++) {
-                        if () {
-                            
+                    
+                        if(poke.get(i) instanceof Firetype){
+                             System.out.println(poke);
                         }
-                        System.out.println(poke);
+                        
                     }
                     break;
                 }
                 case 4: {
-
+                    System.out.println("");
                     break;
                 }
                 case 5: {
@@ -141,9 +144,9 @@ public class Lab3P2_MelvinRivas {
                     break;
                 }
             }
-
+System.out.println("");
         } while (op != 7);
-        System.out.println("");
+       
     }
 
 }
