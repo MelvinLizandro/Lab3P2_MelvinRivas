@@ -114,17 +114,84 @@ public class Lab3P2_MelvinRivas {
                 }
                 case 3: {
                     Firetype fire = new Firetype();
+
+                    System.out.println("-----Tipos Fuego-----");
                     for (int i = 0; i < poke.size(); i++) {
-                    
-                        if(poke.get(i) instanceof Firetype){
-                             System.out.println(poke);
+
+                        if (poke.get(i) instanceof Firetype) {
+                            System.out.println(poke);
                         }
-                        
                     }
+                    System.out.println("");
+
+                    Watertype water = new Watertype();
+
+                    System.out.println("-----Tipos Agua-----");
+                    for (int j = 0; j < poke.size(); j++) {
+                        if (poke.get(j) instanceof Watertype) {
+                            System.out.println(poke);
+                        }
+
+                    }
+                    System.out.println("");
+
+                    Grasstype grass = new Grasstype();
+
+                    System.out.println("-----Tipos Planta-----");
+
+                    for (int j = 0; j < poke.size(); j++) {
+                        if (poke.get(j) instanceof Grasstype) {
+                            System.out.println(poke);
+                        }
+
+                    }
+                    System.out.println("");
                     break;
                 }
                 case 4: {
-                    System.out.println("");
+                    System.out.println("-----Eliminador de pokemons-----");
+                    System.out.println("1. Tipo fuego");
+                    System.out.println("2. Tipo agua");
+                    System.out.println("3. Tipo tierra");
+                    System.out.println("Cual revisar: ");
+                    int optipo2 = input.nextInt();
+                    
+                    if (optipo2 == 1) {
+                        Firetype fire = new Firetype();
+
+                        System.out.println("-----Tipos Fuego-----");
+                        for (int i = 0; i < poke.size(); i++) {
+
+                            if (poke.get(i) instanceof Firetype) {
+                                System.out.println(i+". "+poke);
+                            }
+                        }
+                        System.out.println("Cual deseas eliminar: ");
+                    } else if (optipo2 == 2) {
+                        Watertype water = new Watertype();
+
+                        System.out.println("-----Tipos Agua-----");
+                        for (int j = 0; j < poke.size(); j++) {
+                            if (poke.get(j) instanceof Watertype) {
+                                System.out.println(j+". "+poke);
+                            }
+
+                        }
+                        System.out.println("");
+                    } else if (optipo2 == 3) {
+                        Grasstype grass = new Grasstype();
+
+                        System.out.println("-----Tipos Planta-----");
+
+                        for (int j = 0; j < poke.size(); j++) {
+                            if (poke.get(j) instanceof Grasstype) {
+                                System.out.println(j+". "+poke);
+                            }
+
+                        }
+                        System.out.println("");
+                    }
+                    
                     break;
                 }
                 case 5: {
