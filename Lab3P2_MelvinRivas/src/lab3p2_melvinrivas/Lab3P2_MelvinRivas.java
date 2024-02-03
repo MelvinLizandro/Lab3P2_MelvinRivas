@@ -98,7 +98,7 @@ public class Lab3P2_MelvinRivas {
                         } while (dominio <= 0 && dominio >= 100);
                         Grasstype grass = new Grasstype(habitad, dominio, nombre, num, natu, capturado);
                         poke.add(grass);
-                        
+
                     }
                     break;
                 }
@@ -112,41 +112,41 @@ public class Lab3P2_MelvinRivas {
                     int eficiencia = random.nextInt(1, 4);
                     Pokeball ball = new Pokeball(color, numserie, eficiencia);
                     poball.add(ball);
-                    
+
                     break;
                 }
                 case 3: {
                     Firetype fire = new Firetype();
-                    
+
                     System.out.println("-----Tipos Fuego-----");
                     for (int i = 0; i < poke.size(); i++) {
-                        
+
                         if (poke.get(i) instanceof Firetype) {
                             System.out.println(poke.get(i));
                         }
                     }
                     System.out.println("");
-                    
+
                     Watertype water = new Watertype();
-                    
+
                     System.out.println("-----Tipos Agua-----");
                     for (int j = 0; j < poke.size(); j++) {
                         if (poke.get(j) instanceof Watertype) {
                             System.out.println(poke.get(j));
                         }
-                        
+
                     }
                     System.out.println("");
-                    
+
                     Grasstype grass = new Grasstype();
-                    
+
                     System.out.println("-----Tipos Planta-----");
-                    
+
                     for (int j = 0; j < poke.size(); j++) {
                         if (poke.get(j) instanceof Grasstype) {
                             System.out.println(poke.get(j));
                         }
-                        
+
                     }
                     System.out.println("");
                     break;
@@ -158,13 +158,13 @@ public class Lab3P2_MelvinRivas {
                     System.out.println("3. Tipo tierra");
                     System.out.println("Cual revisar: ");
                     int optipo2 = input.nextInt();
-                    
+
                     if (optipo2 == 1) {
                         Firetype fire = new Firetype();
-                        
+
                         System.out.println("-----Tipos Fuego-----");
                         for (int i = 0; i < poke.size(); i++) {
-                            
+
                             if (poke.get(i) instanceof Firetype) {
                                 System.out.println(i + ". " + poke);
                             }
@@ -174,44 +174,44 @@ public class Lab3P2_MelvinRivas {
                         poke.remove(eliminar);
                     } else if (optipo2 == 2) {
                         Watertype water = new Watertype();
-                        
+
                         System.out.println("-----Tipos Agua-----");
                         for (int j = 0; j < poke.size(); j++) {
                             if (poke.get(j) instanceof Watertype) {
                                 System.out.println(j + ". " + poke);
                             }
-                            
+
                         }
                         System.out.println("Cual deseas eliminar: ");
                         int eliminar = input.nextInt();
                         poke.remove(eliminar);
-                        
+
                     } else if (optipo2 == 3) {
                         Grasstype grass = new Grasstype();
-                        
+
                         System.out.println("-----Tipos Planta-----");
-                        
+
                         for (int j = 0; j < poke.size(); j++) {
                             if (poke.get(j) instanceof Grasstype) {
                                 System.out.println(j + ". " + poke);
                             }
-                            
+
                         }
                         System.out.println("Cual deseas eliminar: ");
                         int eliminar = input.nextInt();
                         poke.remove(eliminar);
-                        
+
                     }
-                    
+
                     break;
                 }
                 case 5: {
                     if (poball.isEmpty()) {
-                        System.out.println("No puedes capturar sin pokeballs");                        
-                    
-                    } else if (poke.isEmpty()){
+                        System.out.println("No puedes capturar sin pokeballs");
+
+                    } else if (poke.isEmpty()) {
                         System.out.println("No has registrado ningun pokemon");
-                    }else{
+                    } else {
                         Random random = new Random();
                         for (int i = 0; i < poball.size(); i++) {
                             System.out.println(i + ". " + poball.get(i).toString());
@@ -225,7 +225,7 @@ public class Lab3P2_MelvinRivas {
                             selecionador = random.nextInt(0, cont);
                             verificador = poke.get(selecionador).isCapturado();
                         }
-                        
+
                         System.out.println("Has encontrador un pokemon");
                         System.out.println(poke.get(selecionador));
                         System.out.println("");
@@ -233,9 +233,9 @@ public class Lab3P2_MelvinRivas {
                         System.out.println("2. Huir");
                         System.out.println("Que deseas realizar: ");
                         int opbatalla = input.nextInt();
-                        if (opbatalla==1) {
+                        if (opbatalla == 1) {
                             int proba = poball.get(pokeausar).getEficiencia();
-                            
+
                             if (proba == 1) {
                                 int c = random.nextInt(0, 4);
                                 if (c == 1) {
@@ -255,99 +255,94 @@ public class Lab3P2_MelvinRivas {
                                     poball.remove(pokeausar);
                                 } else {
                                     System.out.println("Has perdido tu pokeball y al pokemon");
-                                     poball.remove(pokeausar);
+                                    poball.remove(pokeausar);
                                 }
-                            }else if (proba == 3) {
+                            } else if (proba == 3) {
                                 System.out.println("Felicidades a capturado al pokemon");
                                 poke.get(selecionador).setCapturado(true);
                                 poball.remove(pokeausar);
-                                
+
                             }
-                        }else if (opbatalla == 2) {
+                        } else if (opbatalla == 2) {
                             System.out.println("Has huido de la batalla, lastima");
                         }
                     }
                     break;
                 }
                 case 6: {
-                    
+
                     System.out.println("---Lista para editar---");
                     for (int i = 0; i < poke.size(); i++) {
                         if (poke.get(i).isCapturado() == true) {
-                            System.out.println(i+". "+poke.get(i));
+                            System.out.println(i + ". " + poke.get(i));
                         }
                     }
                     System.out.println("Cual desea editar: ");
-                        int opeditar = input.nextInt();
-                       
-                        if (poke.get(opeditar).isCapturado() == true ) {
-      
-                            if (poke.get(opeditar) instanceof Firetype) {
-                                System.out.println("----Menu para editar---");
-                                System.out.println("1. Nombre ");
-                                System.out.println("2. Numero de entrada");
-                                System.out.println("3. Potencia de llamas");
-                                System.out.println("Que deseas realizar: ");
-                                int opeditar2 = input.nextInt();
+                    int opeditar = input.nextInt();
 
-                                if (opeditar2 == 1) {
-                                    System.out.println("Ingrese el nuevo nombre: ");
-                                    String nom = input.nextLine();
-                                    nom = input.nextLine();
-                                    poke.get(opeditar).setNombre(nom);
-                                } else if (opeditar2 == 2) {
-                                    System.out.println("Ingrese el nuevo nuemero de entrada: ");
-                                    int num = input.nextInt();
-                                    poke.get(opeditar).setNumpoke(num);
+                    if (poke.get(opeditar).isCapturado() == true) {
 
-                                }
-                            } else if (poke.get(opeditar) instanceof Watertype) {
-                                System.out.println("----Menu para editar---");
-                                System.out.println("1. Nombre ");
-                                System.out.println("2. Numero de entrada");
-                                System.out.println("3. Puede vivir fuera del agua");
-                                System.out.println("Que deseas realizar: ");
-                                int opeditar2 = input.nextInt();
+                        if (poke.get(opeditar) instanceof Firetype) {
+                            System.out.println("----Menu para editar---");
+                            System.out.println("1. Nombre ");
+                            System.out.println("2. Numero de entrada");
+                            System.out.println("3. Potencia de llamas");
+                            System.out.println("Que deseas realizar: ");
+                            int opeditar2 = input.nextInt();
 
-                                if (opeditar2 == 1) {
-                                    System.out.println("Ingrese el nuevo nombre: ");
-                                    String nom = input.nextLine();
-                                    nom = input.nextLine();
-                                    poke.get(opeditar).setNombre(nom);
-                                } else if (opeditar2 == 2) {
-                                    System.out.println("Ingrese el nuevo nuemero de entrada: ");
-                                    int num = input.nextInt();
-                                    poke.get(opeditar).setNumpoke(num);
-
-                            
-                            }
-                            }else if (poke.get(opeditar) instanceof Grasstype){
-                                System.out.println("----Menu para editar---");
-                                System.out.println("1. Nombre ");
-                                System.out.println("2. Numero de entrada");
-                                System.out.println("3. Puede vivir fuera del agua");
-                                System.out.println("Que deseas realizar: ");
-                                                            int opeditar2 = input.nextInt();
-                            
-                            if (opeditar2 ==1) {
+                            if (opeditar2 == 1) {
                                 System.out.println("Ingrese el nuevo nombre: ");
-                                String nom  = input.nextLine();
+                                String nom = input.nextLine();
                                 nom = input.nextLine();
                                 poke.get(opeditar).setNombre(nom);
-                            }else if (opeditar2 == 2) {
+                            } else if (opeditar2 == 2) {
                                 System.out.println("Ingrese el nuevo nuemero de entrada: ");
                                 int num = input.nextInt();
                                 poke.get(opeditar).setNumpoke(num);
-                                
-                            
-                            }
-                            }
-                            
 
+                            }
+                        } else if (poke.get(opeditar) instanceof Watertype) {
+                            System.out.println("----Menu para editar---");
+                            System.out.println("1. Nombre ");
+                            System.out.println("2. Numero de entrada");
+                            System.out.println("3. Puede vivir fuera del agua");
+                            System.out.println("Que deseas realizar: ");
+                            int opeditar2 = input.nextInt();
+
+                            if (opeditar2 == 1) {
+                                System.out.println("Ingrese el nuevo nombre: ");
+                                String nom = input.nextLine();
+                                nom = input.nextLine();
+                                poke.get(opeditar).setNombre(nom);
+                            } else if (opeditar2 == 2) {
+                                System.out.println("Ingrese el nuevo nuemero de entrada: ");
+                                int num = input.nextInt();
+                                poke.get(opeditar).setNumpoke(num);
+
+                            }
+                        } else if (poke.get(opeditar) instanceof Grasstype) {
+                            System.out.println("----Menu para editar---");
+                            System.out.println("1. Nombre ");
+                            System.out.println("2. Numero de entrada");
+                            System.out.println("3. Puede vivir fuera del agua");
+                            System.out.println("Que deseas realizar: ");
+                            int opeditar2 = input.nextInt();
+
+                            if (opeditar2 == 1) {
+                                System.out.println("Ingrese el nuevo nombre: ");
+                                String nom = input.nextLine();
+                                nom = input.nextLine();
+                                poke.get(opeditar).setNombre(nom);
+                            } else if (opeditar2 == 2) {
+                                System.out.println("Ingrese el nuevo nuemero de entrada: ");
+                                int num = input.nextInt();
+                                poke.get(opeditar).setNumpoke(num);
+
+                            }
                         }
-                                
-                    
-                    
+
+                    }
+
                     break;
                 }
                 case 7: {
@@ -361,7 +356,7 @@ public class Lab3P2_MelvinRivas {
             }
             System.out.println("");
         } while (op != 7);
-        
+
     }
-    
+
 }
