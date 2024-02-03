@@ -26,7 +26,7 @@ public class Watertype extends Pokemon{
 
 @Override
     public String toString() {
-        return super.toString() + ", Respira: " + respira + ", Velocidad al nadar: "+ velonadar;
+        return super.toString() + " Respira sin agua: " + respira + ", Velocidad al nadar: "+ velonadar;
     }
     
 }

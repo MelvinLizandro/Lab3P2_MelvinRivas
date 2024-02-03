@@ -93,7 +93,7 @@ public class Lab3P2_MelvinRivas {
                         do{
                         System.out.println("Ingrese el dominio de plantas (0-100): ");
                          dominio = input.nextInt();
-                        }while(dominio >= 0 && dominio <= 100);
+                        }while(dominio <= 0 && dominio >= 100);
                         Grasstype grass = new Grasstype(habitad,dominio,nombre,num,natu,capturado);
                         poke.add(grass);
                         
@@ -103,6 +103,7 @@ public class Lab3P2_MelvinRivas {
                 case 2: {
                     System.out.println("Ingrese el color de la pokebola: ");
                     String color = input.nextLine();
+                    color = input.nextLine();
                     System.out.println("Ingrese el numero de serie: ");
                     int numserie = input.nextInt();
                     Random random = new Random();
@@ -119,7 +120,7 @@ public class Lab3P2_MelvinRivas {
                     for (int i = 0; i < poke.size(); i++) {
 
                         if (poke.get(i) instanceof Firetype) {
-                            System.out.println(poke);
+                            System.out.println(poke.get(i));
                         }
                     }
                     System.out.println("");
@@ -129,7 +130,7 @@ public class Lab3P2_MelvinRivas {
                     System.out.println("-----Tipos Agua-----");
                     for (int j = 0; j < poke.size(); j++) {
                         if (poke.get(j) instanceof Watertype) {
-                            System.out.println(poke);
+                            System.out.println(poke.get(j));
                         }
 
                     }
@@ -141,7 +142,7 @@ public class Lab3P2_MelvinRivas {
 
                     for (int j = 0; j < poke.size(); j++) {
                         if (poke.get(j) instanceof Grasstype) {
-                            System.out.println(poke);
+                            System.out.println(poke.get(j));
                         }
 
                     }
@@ -167,6 +168,8 @@ public class Lab3P2_MelvinRivas {
                             }
                         }
                         System.out.println("Cual deseas eliminar: ");
+                        int eliminar = input.nextInt();
+                        poke.remove(eliminar);
                     } else if (optipo2 == 2) {
                         Watertype water = new Watertype();
 
@@ -177,7 +180,10 @@ public class Lab3P2_MelvinRivas {
                             }
 
                         }
-                        System.out.println("");
+                          System.out.println("Cual deseas eliminar: ");
+                          int eliminar = input.nextInt();
+                          poke.remove(eliminar);
+
                     } else if (optipo2 == 3) {
                         Grasstype grass = new Grasstype();
 
@@ -189,13 +195,36 @@ public class Lab3P2_MelvinRivas {
                             }
 
                         }
-                        System.out.println("");
+                          System.out.println("Cual deseas eliminar: ");
+                          int eliminar = input.nextInt();
+                          poke.remove(eliminar);
+
                     }
                     
                     break;
                 }
                 case 5: {
-
+                    if(poball.isEmpty()){
+                        System.out.println("No puedes capturar sin pokeballs");   
+                    }else{
+                    Random random = new Random();
+                    for (int i = 0; i < poball.size(); i++) {
+                        System.out.println(i+". "+poball.get(i).toString());
+                    }
+                    System.out.println("Selecion la pokebola a usar: ");
+                    int pokeausar = input.nextInt();
+                    boolean verificador = true;
+                    int selecionador=0;
+                    while(verificador == true){
+                   int cont = poke.size(); //cont va servir para copiar contidad de pokemon en la lista
+                   selecionador = random.nextInt(0,cont);
+                     verificador = poke.get(selecionador).isCapturado();
+                    }
+                   
+                    System.out.println("Has encontrador un pokemon");
+                    System.out.println(poke.get(selecionador));
+                   
+                    }
                     break;
                 }
                 case 6: {
@@ -203,7 +232,7 @@ public class Lab3P2_MelvinRivas {
                     break;
                 }
                 case 7: {
-
+                    System.out.println("Hasta la proxima, Gracias por su preferencia");
                     break;
                 }
                 default: {
