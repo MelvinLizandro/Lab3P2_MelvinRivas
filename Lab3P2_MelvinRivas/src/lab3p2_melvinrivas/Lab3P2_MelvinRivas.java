@@ -244,6 +244,7 @@ public class Lab3P2_MelvinRivas {
                                     poball.remove(pokeausar);
                                 } else {
                                     System.out.println("Has perdido tu pokeball y al pokemon");
+                                    poball.remove(pokeausar);
                                 }
 
                             } else if (proba == 2) {
@@ -254,6 +255,7 @@ public class Lab3P2_MelvinRivas {
                                     poball.remove(pokeausar);
                                 } else {
                                     System.out.println("Has perdido tu pokeball y al pokemon");
+                                     poball.remove(pokeausar);
                                 }
                             }else if (proba == 3) {
                                 System.out.println("Felicidades a capturado al pokemon");
@@ -268,6 +270,83 @@ public class Lab3P2_MelvinRivas {
                     break;
                 }
                 case 6: {
+                    
+                    System.out.println("---Lista para editar---");
+                    for (int i = 0; i < poke.size(); i++) {
+                        if (poke.get(i).isCapturado() == true) {
+                            System.out.println(i+". "+poke.get(i));
+                        }
+                    }
+                    System.out.println("Cual desea editar: ");
+                        int opeditar = input.nextInt();
+                       
+                        if (poke.get(opeditar).isCapturado() == true ) {
+      
+                            if (poke.get(opeditar) instanceof Firetype) {
+                                System.out.println("----Menu para editar---");
+                                System.out.println("1. Nombre ");
+                                System.out.println("2. Numero de entrada");
+                                System.out.println("3. Potencia de llamas");
+                                System.out.println("Que deseas realizar: ");
+                                int opeditar2 = input.nextInt();
+
+                                if (opeditar2 == 1) {
+                                    System.out.println("Ingrese el nuevo nombre: ");
+                                    String nom = input.nextLine();
+                                    nom = input.nextLine();
+                                    poke.get(opeditar).setNombre(nom);
+                                } else if (opeditar2 == 2) {
+                                    System.out.println("Ingrese el nuevo nuemero de entrada: ");
+                                    int num = input.nextInt();
+                                    poke.get(opeditar).setNumpoke(num);
+
+                                }
+                            } else if (poke.get(opeditar) instanceof Watertype) {
+                                System.out.println("----Menu para editar---");
+                                System.out.println("1. Nombre ");
+                                System.out.println("2. Numero de entrada");
+                                System.out.println("3. Puede vivir fuera del agua");
+                                System.out.println("Que deseas realizar: ");
+                                int opeditar2 = input.nextInt();
+
+                                if (opeditar2 == 1) {
+                                    System.out.println("Ingrese el nuevo nombre: ");
+                                    String nom = input.nextLine();
+                                    nom = input.nextLine();
+                                    poke.get(opeditar).setNombre(nom);
+                                } else if (opeditar2 == 2) {
+                                    System.out.println("Ingrese el nuevo nuemero de entrada: ");
+                                    int num = input.nextInt();
+                                    poke.get(opeditar).setNumpoke(num);
+
+                            
+                            }
+                            }else if (poke.get(opeditar) instanceof Grasstype){
+                                System.out.println("----Menu para editar---");
+                                System.out.println("1. Nombre ");
+                                System.out.println("2. Numero de entrada");
+                                System.out.println("3. Puede vivir fuera del agua");
+                                System.out.println("Que deseas realizar: ");
+                                                            int opeditar2 = input.nextInt();
+                            
+                            if (opeditar2 ==1) {
+                                System.out.println("Ingrese el nuevo nombre: ");
+                                String nom  = input.nextLine();
+                                nom = input.nextLine();
+                                poke.get(opeditar).setNombre(nom);
+                            }else if (opeditar2 == 2) {
+                                System.out.println("Ingrese el nuevo nuemero de entrada: ");
+                                int num = input.nextInt();
+                                poke.get(opeditar).setNumpoke(num);
+                                
+                            
+                            }
+                            }
+                            
+
+                        }
+                                
+                    
                     
                     break;
                 }
